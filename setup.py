@@ -173,7 +173,7 @@ class DepsTableUpdateCommand(Command):
         (
             "dep-table-update",
             None,
-            "updates src/diffusers/dependency_versions_table.py",
+            "updates src/brushnet_diffusers/dependency_versions_table.py",
         ),
     ]
 
@@ -194,7 +194,7 @@ class DepsTableUpdateCommand(Command):
             "}",
             "",
         ]
-        target = "src/diffusers/dependency_versions_table.py"
+        target = "src/brushnet_diffusers/dependency_versions_table.py"
         print(f"updating {target}")
         with open(target, "w", encoding="utf-8", newline="\n") as f:
             f.write("\n".join(content))
@@ -248,7 +248,7 @@ install_requires = [
 version_range_max = max(sys.version_info[1], 10) + 1
 
 setup(
-    name="diffusers",
+    name="brushnet_diffusers",
     version="0.27.0.dev0",  # expected format is one of x.y.z.dev0, or x.y.z.rc1 or x.y.z (no to dashes, yes to dots)
     description="State-of-the-art diffusion in PyTorch and JAX.",
     long_description=open("README.md", "r", encoding="utf-8").read(),
